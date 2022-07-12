@@ -22,7 +22,7 @@ env:
 
 
 jobs:
-  openvino_dev:
+  lava-vnc:
 
     runs-on: ubuntu-latest
     env:
