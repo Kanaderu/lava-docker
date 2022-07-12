@@ -1,0 +1,17 @@
+services:
+  lava:
+    build: dockerfiles/
+    network_mode: host
+    #ports:
+    #  - 5901:5901
+    environment:
+      - RESET_VNC=true
+      - VNC_PASSWORD=password
+      - GEOMETRY=1920x1080
+      - DEPTH=32
+      - DISPLAY=:2
+    volumes:
+      - ./:/apps
+        #- $XAUTHORITY:/home/cedar/.Xauthority
+      #- $XAUTHORITY:/root/.Xauthority
+      #- /tmp/.X11-unix:/tmp/.X11-unix
